@@ -1,4 +1,40 @@
-/* General styles */
+/* Defining variables */
+
+:root {
+  --background-color: #4ABDAC;
+  --header-color: #ffffff;
+  --text-color: #DFDCE3;
+  --accent-color: #F7B733;
+}
+
+body {
+  background: var(--background-color);
+}
+
+h1,h2,h3,h4 {
+  color: var(--header-color);
+  font-family: 'Open Sans';
+}
+
+a {
+  color: var(--accent-color);
+}
+
+a:hover,
+a:focus {
+  --accent-color: green;
+}
+
+
+@media (min-width: 600px) {
+  a { 
+    --accent-color: midnightblue;
+  }
+}
+
+
+
+/* General styles don't pay attention to these! */
 
 *,*::before,*::after {
   box-sizing: border-box;
@@ -60,15 +96,3 @@ a:hover {
   }
 }
 
-/* Defining variables */
-
-:root {
-  --background-color: #4ABDAC;
-  --header-color: #ffffff;
-  --text-color: #DFDCE3;
-  --accent-color: #F7B733;
-}
-
-body {
-  background: var(--background-color);
-}
